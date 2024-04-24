@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+}
+
+header {
+  font-family: var(--font-lugrasimo);
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
