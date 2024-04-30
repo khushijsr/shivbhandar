@@ -20,7 +20,6 @@ export default function Items({
     continuous: false,
   });
 
-  console.log("transcript", transcript);
   const [searchText, setSearchText] = useState("");
   const filteredItems = searchText.length
     ? items.filter((item) =>
