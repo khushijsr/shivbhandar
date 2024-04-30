@@ -16,6 +16,7 @@ const useVoiceToText = (
   { lang, continuous }: Options = { lang: "en-US", continuous: true }
 ) => {
   const [transcript, setTranscript] = useState<string>("");
+  const [isListening, setIsListening] = useState<boolean>(false);
   const isContinuous = useRef<boolean>(continuous ?? true);
 
   const SpeechRecognition = useMemo(() => {
@@ -38,6 +39,7 @@ const useVoiceToText = (
 
   function startListening() {
     if (!recognition) return;
+    setIsListening(true);
     setTranscript("");
     recognition.start();
     if (continuous) {
@@ -47,6 +49,7 @@ const useVoiceToText = (
 
   function stopListening() {
     if (!recognition) return;
+    setIsListening(false);
     recognition.stop();
     isContinuous.current = false;
   }
@@ -59,6 +62,7 @@ const useVoiceToText = (
       }
     };
     recognition.onerror = (event: SpeechRecognitionErrorEvent) => {
+      setIsListening(false);
       console.error(`Speech recognition error detected: ${event.error}`);
     };
 
@@ -67,10 +71,11 @@ const useVoiceToText = (
         (prevTranscript) =>
           prevTranscript + " " + event.results[0][0].transcript
       );
+      setIsListening(false);
     };
   }
 
-  return { startListening, stopListening, transcript };
+  return { startListening, stopListening, transcript, isListening };
 };
 
 export default useVoiceToText;

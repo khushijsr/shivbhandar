@@ -16,9 +16,10 @@ export default function Items({
 }: {
   setShowContacts: Dispatch<SetStateAction<boolean>>;
 }) {
-  const { startListening, transcript } = useVoiceToText({
-    continuous: false,
-  });
+  const { startListening, stopListening, transcript, isListening } =
+    useVoiceToText({
+      continuous: false,
+    });
 
   const [searchText, setSearchText] = useState("");
   const filteredItems = searchText.length
@@ -37,6 +38,34 @@ export default function Items({
 
   return (
     <>
+      <div
+        className={cn(
+          "w-[200px] transition-all top-0 right-0 fixed h-[200px] rounded-bl-full bg-white z-20 shadow-lg flex items-center justify-center pl-[25px] pb-[25px]",
+          {
+            "translate-x-0 translate-y-0": isListening,
+            "translate-x-[220px] translate-y-[-220px]": !isListening,
+          }
+        )}
+      >
+        <button
+          onClick={stopListening}
+          className="w-6 h-6 flex items-center justify-center absolute top-2 right-2 z-20"
+        >
+          <span className="material-symbols-outlined text-slate-400 focus:text-slate-500">
+            close
+          </span>
+        </button>
+        <div className="relative">
+          <div className="w-[50px] h-[50px] rounded-full border border-slate-300 animate-ping flex items-center justify-center">
+            <div className="w-[40px] h-[40px] rounded-full border border-slate-400 animate-ping flex items-center justify-center">
+              <div className="w-[30px] h-[30px] rounded-full border border-slate-400 animate-ping flex items-center justify-center"></div>
+            </div>
+          </div>
+          <span className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] material-symbols-outlined text-slate-400 animate-pulse">
+            mic
+          </span>
+        </div>
+      </div>
       <div className="sticky top-0 bg-slate-100">
         <header
           className={cn(
