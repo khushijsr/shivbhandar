@@ -29,7 +29,7 @@ const items: ItemType[] = [
         quantity: "5 kg",
       },
       {
-        amount: "40 / 42",
+        amount: "40",
         quantity: "1 kg",
       },
     ],
@@ -37,10 +37,10 @@ const items: ItemType[] = [
   },
   {
     id: "aata",
-    name: "aata",
+    name: "khula aata",
     price: [
       {
-        amount: "34",
+        amount: "32/34",
         quantity: "1 kg",
       },
     ],
@@ -62,7 +62,7 @@ const items: ItemType[] = [
     name: "chana dal",
     price: [
       {
-        amount: "90/85",
+        amount: "100",
         quantity: "1 kg",
       },
     ],
@@ -73,7 +73,7 @@ const items: ItemType[] = [
     name: "rahar dal",
     price: [
       {
-        amount: "180/190",
+        amount: "185/190",
         quantity: "1 kg",
       },
     ],
@@ -84,7 +84,7 @@ const items: ItemType[] = [
     name: "masoor dal",
     price: [
       {
-        amount: "100/130",
+        amount: "90/100",
         quantity: "1 kg",
       },
     ],
@@ -92,14 +92,25 @@ const items: ItemType[] = [
   },
   {
     id: "dal",
-    name: "mong dal",
+    name: "chota masoor dal",
     price: [
       {
-        amount: "130/120",
+        amount: "130",
         quantity: "1 kg",
       },
     ],
-    searchTexts: ["dal", "mong", "mong dal"],
+    searchTexts: ["dal", "masoori", "masoor dal"],
+  },
+  {
+    id: "dal",
+    name: "moong dal",
+    price: [
+      {
+        amount: "140/160",
+        quantity: "1 kg",
+      },
+    ],
+    searchTexts: ["dal", "moong", "mong dal"],
   },
   {
     id: "dal",
@@ -117,7 +128,7 @@ const items: ItemType[] = [
     name: "chana",
     price: [
       {
-        amount: "80",
+        amount: "90",
         quantity: "1 kg",
       },
     ],
@@ -128,7 +139,7 @@ const items: ItemType[] = [
     name: "chura",
     price: [
       {
-        amount: "50/45",
+        amount: "50",
         quantity: "1 kg",
       },
     ],
@@ -169,7 +180,7 @@ const items: ItemType[] = [
   },
   {
     id: "badam",
-    name: "badam,",
+    name: "badam",
     price: [
       {
         amount: "180",
@@ -227,6 +238,10 @@ const items: ItemType[] = [
         amount: "800",
         quantity: "1 kg",
       },
+      {
+        amount: "80/90",
+        quantity: "100g",
+      },
     ],
     searchTexts: ["kaaju", "kaju"],
   },
@@ -239,8 +254,12 @@ const items: ItemType[] = [
         quantity: "1 kg",
       },
       {
-        amount: "80",
+        amount: "75",
         quantity: "250 g",
+      },
+      {
+        amount: "30",
+        quantity: "100 g",
       },
     ],
     searchTexts: ["kismis", "kishmish", "kismish"],
@@ -298,23 +317,23 @@ const items: ItemType[] = [
         quantity: "1 kg",
       },
       {
-        amount: "920/960",
-        quantity: "25 kg",
+        amount: "1030 nagad /1050 udhar",
+        quantity: "26 kg",
       },
     ],
     searchTexts: ["chawal", "amrit", "amrit chawal"],
   },
   {
     id: "chawal",
-    name: "laxmichawal",
+    name: "laxmi chawal",
     price: [
       {
         amount: "40/38",
         quantity: "1 kg",
       },
       {
-        amount: "850/880",
-        quantity: "25 kg",
+        amount: "950 nagad /970 udhar",
+        quantity: "26 kg",
       },
     ],
     searchTexts: ["chawal", "laxmi", "laxmi chawal"],
@@ -328,8 +347,8 @@ const items: ItemType[] = [
         quantity: "1 kg",
       },
       {
-        amount: "1274",
-        quantity: "25 kg",
+        amount: "1400",
+        quantity: "26 kg",
       },
     ],
     searchTexts: ["chawal", "baba", "baba chawal", "baba katrani"],
@@ -343,8 +362,8 @@ const items: ItemType[] = [
         quantity: "1 kg",
       },
       {
-        amount: "860/1000",
-        quantity: "25 kg",
+        amount: "860",
+        quantity: "26 kg",
       },
     ],
     searchTexts: ["chawal", "taj mahal", "taj chawal", "taj"],
@@ -362,10 +381,10 @@ const items: ItemType[] = [
   },
   {
     id: "chawal",
-    name: "modo chawal",
+    name: "mudi chawal",
     price: [
       {
-        amount: "36/35",
+        amount: "35/36",
         quantity: "1 kg",
       },
     ],
@@ -380,33 +399,18 @@ const items: ItemType[] = [
         quantity: "1 kg",
       },
       {
-        amount: "750",
-        quantity: "25 kg",
+        amount: "800",
+        quantity: "26 kg",
       },
     ],
     searchTexts: ["chawal", "nilgiri", "nilgiri chawal"],
   },
   {
-    id: "chawal",
-    name: "pragati chawal",
-    price: [
-      {
-        amount: "32/34",
-        quantity: "1 kg",
-      },
-      {
-        amount: "1210",
-        quantity: "25 kg",
-      },
-    ],
-    searchTexts: ["chawal", "pragati", "pragati chawal"],
-  },
-  {
     id: "mung",
-    name: "mung",
+    name: "gota mung",
     price: [
       {
-        amount: "140/120",
+        amount: "140",
         quantity: "1 kg",
       },
     ],
@@ -414,23 +418,22 @@ const items: ItemType[] = [
   },
   {
     id: "chawal",
-    name: "pragati miliket",
+    name: "pragati chawal / miniket / minicut",
     price: [
       {
-        amount: "54/52",
+        amount: "50",
         quantity: "1 kg",
       },
+      {
+        amount: "1270",
+        quantity: "26 kg",
+      },
     ],
-    searchTexts: [
-      "chawal",
-      "miliket",
-      "pragati miliket chawal",
-      "pragati miliket",
-    ],
+    searchTexts: ["chawal", "pragati", "pragati chawal"],
   },
   {
     id: "mangrel",
-    name: "mangrel",
+    name: "mangrel / mangrail",
     price: [
       {
         amount: "20/25",
@@ -477,7 +480,7 @@ const items: ItemType[] = [
     name: "golki",
     price: [
       {
-        amount: "60/50/45",
+        amount: "55/60",
         quantity: "50 g",
       },
     ],
@@ -488,7 +491,7 @@ const items: ItemType[] = [
     name: "pachforan",
     price: [
       {
-        amount: "15",
+        amount: "15/20",
         quantity: "50 g",
       },
     ],
@@ -499,7 +502,11 @@ const items: ItemType[] = [
     name: "jeera",
     price: [
       {
-        amount: "60/70",
+        amount: "35",
+        quantity: "50 g",
+      },
+      {
+        amount: "65/70",
         quantity: "100 g",
       },
     ],
@@ -576,8 +583,12 @@ const items: ItemType[] = [
     name: "soaf",
     price: [
       {
-        amount: "20",
+        amount: "20/25",
         quantity: "50 g",
+      },
+      {
+        amount: "40/45",
+        quantity: "100 g",
       },
     ],
     searchTexts: ["sof", "suaf", "soaf"],
@@ -587,52 +598,57 @@ const items: ItemType[] = [
     name: "postu",
     price: [
       {
-        amount: "80",
+        amount: "80/85/90",
         quantity: "50 g",
+      },
+      {
+        amount: "160/170",
+        quantity: "100 g",
       },
     ],
     searchTexts: ["postu", "pustu", "poshtu"],
   },
   {
-    id: "anda",
-    name: "anda",
-    price: [
-      {
-        amount: "90",
-        quantity: "8 pc",
-      },
-    ],
-    searchTexts: ["andaa", "aanda", "anda"],
-  },
-  {
     id: "sobean",
-    name: "sobean",
+    name: "soyabean / sobean",
     price: [
       {
         amount: "30",
         quantity: "250 g",
       },
+      {
+        amount: "120",
+        quantity: "1 kg",
+      },
     ],
     searchTexts: ["soyabean", "soobean", "sobean", "sobeen"],
   },
   {
-    id: "chana ",
+    id: "kabalichana ",
     name: "kabali chana",
     price: [
       {
-        amount: "180",
+        amount: "45/50",
         quantity: "250 g",
+      },
+      {
+        amount: "180/200",
+        quantity: "1 kg",
       },
     ],
     searchTexts: ["kabali", "kabali chana", "bara chana", "bada chana"],
   },
   {
     id: "aalo",
-    name: "aalo",
+    name: "aaloo / aaluu",
     price: [
       {
-        amount: "20/22/24/25",
-        quantity: "kg",
+        amount: "35 gol",
+        quantity: "1 kg",
+      },
+      {
+        amount: "40 k22",
+        quantity: "1 kg",
       },
     ],
     searchTexts: ["alo", "aalo"],
@@ -642,8 +658,8 @@ const items: ItemType[] = [
     name: "piyaj",
     price: [
       {
-        amount: "30/32/34",
-        quantity: "kg",
+        amount: "40/45",
+        quantity: "1 kg",
       },
     ],
     searchTexts: ["piyaz", "piyaj", "peyaj"],
@@ -653,15 +669,19 @@ const items: ItemType[] = [
     name: "chowmein",
     price: [
       {
-        amount: "35/40/20",
-        quantity: "kg",
+        amount: "25/30",
+        quantity: "chota",
+      },
+      {
+        amount: "35/40",
+        quantity: "bada",
       },
     ],
     searchTexts: ["chow", "chowmein", "noodle"],
   },
   {
     id: "soji",
-    name: "soji",
+    name: "sooji / suji",
     price: [
       {
         amount: "25/30",
@@ -675,7 +695,7 @@ const items: ItemType[] = [
     name: "maida",
     price: [
       {
-        amount: "35",
+        amount: "30/35",
         quantity: "1/2kg",
       },
     ],
@@ -685,6 +705,10 @@ const items: ItemType[] = [
     id: "sattu",
     name: "sattu",
     price: [
+      {
+        amount: "40",
+        quantity: "250 g",
+      },
       {
         amount: "80",
         quantity: "1/2kg",
@@ -697,11 +721,7 @@ const items: ItemType[] = [
     name: "besan",
     price: [
       {
-        amount: "130",
-        quantity: "1 kg",
-      },
-      {
-        amount: "65",
+        amount: "65/70",
         quantity: "1/2 kg",
       },
     ],
@@ -712,8 +732,12 @@ const items: ItemType[] = [
     name: "mahakush refine",
     price: [
       {
+        amount: "60/65",
+        quantity: "1/2 ltr",
+      },
+      {
         amount: "115/120",
-        quantity: "1 l",
+        quantity: "1 ltr",
       },
     ],
     searchTexts: ["refine", "mahakush"],
@@ -723,8 +747,8 @@ const items: ItemType[] = [
     name: "saffola",
     price: [
       {
-        amount: "130/140",
-        quantity: "1 l",
+        amount: "150",
+        quantity: "1 ltr",
       },
     ],
     searchTexts: ["saffola", "saffola refine"],
@@ -734,8 +758,12 @@ const items: ItemType[] = [
     name: "hathi tel",
     price: [
       {
+        amount: "75",
+        quantity: "1/2 ltr",
+      },
+      {
         amount: "140",
-        quantity: "1 l",
+        quantity: "1 ltr",
       },
     ],
     searchTexts: ["hathi tel", "sarso tel"],
@@ -745,22 +773,15 @@ const items: ItemType[] = [
     name: "saloni tel",
     price: [
       {
-        amount: "135",
-        quantity: "1 l",
+        amount: "72/75",
+        quantity: "1/2 ltr",
+      },
+      {
+        amount: "135/140",
+        quantity: "1 ltr",
       },
     ],
     searchTexts: ["saloni", "shaloni"],
-  },
-  {
-    id: "",
-    name: "",
-    price: [
-      {
-        amount: "2",
-        quantity: "4kg",
-      },
-    ],
-    searchTexts: [],
   },
 ];
 
