@@ -28,13 +28,14 @@ export default function Contacts({
   return (
     <div
       className={cn(
-        "fixed w-[100vw] transition-all h-[100vh] top-0 bottom-0 left-0 bg-slate-100",
+        "fixed overflow-y-auto w-[100vw] transition-all h-[100vh] top-0 bottom-0 left-0 bg-slate-100",
         {
           "translate-x-[101vw]": !showContacts,
           "translate-x-0": showContacts,
         }
       )}
     >
+    <div className="top-0 sticky bg-slate-100 z-10">
       <header
         className={cn(
           montserrat.className,
@@ -54,7 +55,6 @@ export default function Contacts({
           </span>
         </button>
       </header>
-      <div>
         <div className="p-2 r flex">
           <div className="gap-x-2 flex bg-white items-center border border-gray-300 p-2 w-full rounded-md focus-within:outline-none focus-within:ring-2 focus-within:ring-violet-700 focus-within:border-transparent">
             <span className="material-symbols-outlined text-slate-400">
@@ -78,6 +78,8 @@ export default function Contacts({
             ) : null}
           </div>
         </div>
+        </div>
+      <div>
         <div className="px-2 flex flex-col gap-y-2">
           {filteredContacts.map((contact, i) => (
             <Contact contact={contact} key={`${contact.company}-${i}`} />
